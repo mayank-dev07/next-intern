@@ -3,7 +3,7 @@ import Image from "next/image";
 import { sport_detalis } from "../constants/cards";
 import { useTheme } from "../constants/theme";
 
-const Card = () => {
+const Card: React.FC = () => {
   const { isDark } = useTheme();
   return (
     <div className="flex flex-wrap justify-center items-center">

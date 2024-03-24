@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { FreeMode, Navigation } from "swiper/modules";
 import { useTheme } from "../constants/theme";
 
-const Spotlight = () => {
+const Spotlight: React.FC = () => {
   const { isDark } = useTheme();
   const [swiperRef, setSwiperRef] = useState<SwiperClass>();
 
