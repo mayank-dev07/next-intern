@@ -104,9 +104,9 @@ const Spotlight: React.FC = () => {
                         }`}
                       />
                     </div>
-                    <div className="pb-3 flex flex-col px-3 justify-center items-center">
+                    <div className="pb-3 flex flex-col px-2 justify-center items-center">
                       <div className=" flex flex-col justify-center items-center pb-4">
-                        <span className="capitalize text-base">
+                        <span className="capitalize text-base whitespace-nowrap ">
                           {item.name}
                         </span>
                         <div
@@ -114,11 +114,17 @@ const Spotlight: React.FC = () => {
                             isDark ? "dvide-[#84868C]" : "divide-[#A0A0A0]"
                           }`}
                         >
-                          <span className="text-sm px-[5px]">{item.month}</span>
-                          <span className="text-sm px-[5px]">{item.day}</span>
-                          <span className="text-sm px-[5px]">{item.time}</span>
+                          <span className="text-sm px-[5px] whitespace-nowrap">
+                            {item.month}
+                          </span>
+                          <span className="text-sm px-[5px] whitespace-nowrap">
+                            {item.day}
+                          </span>
+                          <span className="text-sm px-[5px] whitespace-nowrap">
+                            {item.time}
+                          </span>
                         </div>
-                        <span className="capitalize text-base text-center min-h-10">
+                        <span className="capitalize text-[14px] text-center min-h-10 ">
                           {item.Address}
                         </span>
                       </div>
