@@ -26,11 +26,11 @@ const Home: React.FC = () => {
             isDark ? "text-white bg-[#292B32]" : "text-black bg-[#F7F7F8]"
           }`}
         >
-          <div className="fixed top-0 right-0">
+          <div className="fixed top-0 right-0 z-30">
             <Toogle />
           </div>
           <section className=" flex justify-center items-center container">
-            <div className=" px-5 py-12 mx-auto">
+            <div className=" px-5 py-12 mx-auto w-full">
               <p className="text-3xl underline underline-offset-[14px] decoration-[#738FFF] font-bold">
                 Sports
               </p>

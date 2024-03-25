@@ -40,7 +40,7 @@ export const sport_detalis = [
     width: "500",
     height: "500",
     type: "ad",
-    title: "Advertisement Tite",
+    title: "Advertisement Title",
     about:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa enim, ab incidunt iusto temporibus, ad aperiam sint namy        suscipit quasi totam. Officiis iusto esse, error harum dolores suscipit",
   },
