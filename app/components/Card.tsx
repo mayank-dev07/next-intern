@@ -18,27 +18,33 @@ const Card: React.FC = () => {
                 isDark ? "bg-[#3B3E47]" : "bg-white"
               }`}
             >
-              <Image
-                className="h-[218px]  w-full transform object-fill "
-                src={item.image}
-                width={500}
-                height={500}
-                alt="Picture of the author"
-              />
-              <span className="absolute bg-black text-white z-50 text-sm top-0 right-0 m-4 px-2 font-bold">
-                Ad
-              </span>
-              <div className="px-2">
-                <h2 className="text-lg mb-4 mt-4 text-center font-bold">
-                  {item.title}
-                </h2>
-                <p
-                  className={`text-sm ${
-                    isDark ? "text-[#D4D5D5]" : "text-[#7D828B]"
-                  }`}
-                >
-                  {item.about}
-                </p>
+              <div
+                className={`border-[1px] ${
+                  isDark ? "border-[#344349]" : "border-[#DFEBE9]"
+                } min-h-[523px]`}
+              >
+                <Image
+                  className="h-[218px]  w-full transform object-fill "
+                  src={item.image}
+                  width={500}
+                  height={500}
+                  alt="Picture of the author"
+                />
+                <span className="absolute bg-black text-white z-50 text-sm top-0 right-0 m-4 px-2 font-bold">
+                  Ad
+                </span>
+                <div className="px-2">
+                  <h2 className="text-lg mb-4 mt-4 text-center font-bold">
+                    {item.title}
+                  </h2>
+                  <p
+                    className={`text-sm ${
+                      isDark ? "text-[#D4D5D5]" : "text-[#7D828B]"
+                    }`}
+                  >
+                    {item.about}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
