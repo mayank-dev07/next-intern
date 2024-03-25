@@ -7,11 +7,11 @@ const Card: React.FC = () => {
   const { isDark } = useTheme();
   return (
     <div className="flex flex-wrap justify-center items-center">
-      {sport_detalis.map((item) =>
+      {sport_detalis.map((item, index) =>
         item.type == "ad" ? (
           <div
             className="xl:w-1/5 lg:w-1/4 md:w-1/3 sm:w-1/2 w-[305.47px] p-2"
-            key={item.name}
+            key={index}
           >
             <div
               className={`p-3 shadow-xl min-h-[523px] relative ${
@@ -29,27 +29,21 @@ const Card: React.FC = () => {
                 Ad
               </span>
               <div className="px-2">
-                <h2 className="text-lg mb-4 mt-4 text-center font-bold text-xl">
-                  Advertisement&nbsp;Title
+                <h2 className="text-lg mb-4 mt-4 text-center font-bold">
+                  {item.title}
                 </h2>
                 <p
                   className={`text-sm ${
                     isDark ? "text-[#D4D5D5]" : "text-[#7D828B]"
                   }`}
                 >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-                  enim, ab incidunt iusto temporibus, ad aperiam sint nam
-                  suscipit quasi totam. Officiis iusto esse, error harum dolores
-                  suscipit
+                  {item.about}
                 </p>
               </div>
             </div>
           </div>
         ) : (
-          <div
-            className="xl:w-1/5 lg:w-1/4 md:w-1/3 sm:w-1/2 p-2 "
-            key={item.name}
-          >
+          <div className="xl:w-1/5 lg:w-1/4 md:w-1/3 sm:w-1/2 p-2 " key={index}>
             <div
               className={`p-3 shadow-xl min-h-[523px] relative ${
                 isDark ? "bg-[#3B3E47]" : "bg-white"
@@ -67,7 +61,6 @@ const Card: React.FC = () => {
                 className={`w-full h-[54px] flex justify-between px-2 py-2 ${
                   isDark ? "bg-[#292B32]" : "bg-[#F7F7F8]"
                 }`}
-                // style={{ backgroundColor: "" }}
               >
                 <div className="flex flex-col w-1/2">
                   <p
@@ -77,7 +70,7 @@ const Card: React.FC = () => {
                   >
                     Total events
                   </p>
-                  <p>48 Events</p>
+                  <p>{item.events}&nbsp;Events</p>
                 </div>
                 <div className="flex flex-col w-1/2">
                   <p
@@ -87,7 +80,7 @@ const Card: React.FC = () => {
                   >
                     Sports
                   </p>
-                  <p>Baseball</p>
+                  <p>{item.sports}</p>
                 </div>
               </div>
             </div>
